@@ -53,13 +53,12 @@ body{
 
 .container{
     display: flex;
-    width:100%;
     padding:o 15px;
     margin:0 auto;
     
 }
 
-@media (min-width:576px){
+/* @media (min-width:576px){
     .container{
         max-width:540px;
     }
@@ -80,14 +79,18 @@ body{
     .container {
       max-width: 1152px;
     }
-  }
+  } */
 
   header.topbar{
-      
+    flex: 1; 
     background:var(--secondary);
     color:var(--pure);
     font-family:"Raleway-bold";
     padding:0.75rem 0;   
+}
+
+header.topbar .left h1{
+    color:var(--primary);
 }
 
 
@@ -127,20 +130,110 @@ header.topbar .right a:hover{
 
 header.hero{
     padding: 4rem 0;
-    align-items: center;
-}
-
-header.hero .mypic img{
-    vertical-align: middle;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-}
-
-header.hero{
+    color:var(--heaven);
+    word-spacing: 7px;
+    font-family: "Raleway-semibold";
     background-repeat: no-repeat;
-    background-image: url(../images/background.svg);
-    height: 450px;
+    background-image: url(../images/background_main.jpg);
+    height: 400px;
     background-position: 0% 0%;
     overflow:hidden;
+    justify-content: flex-start;
+}
+
+
+.education{
+    padding: 4rem 0;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-color: var(--light);
+}
+
+.education .education-heading{
+    text-align: center;
+    color: blueviolet;
+    font-family: "raleway-bold";
+}
+
+.education .data{
+
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px var(--secondary) #ddd;
+        padding: 8px;
+
+}
+
+.education hr{
+    margin: 2rem;
+    border-top: 3px solid black;
+}
+
+
+.education .data td,th{
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+
+.education .data th {
+    font-family:"Raleway-semibold" ;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  .education .data td {
+    font-family:"Raleway-medium" ;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    background-color:white;
+    color:black;
+  }
+
+.project{
+    padding: 4rem 0;
+    word-spacing: 7px;
+    font-family: "Raleway-semibold";
+    background-repeat: no-repeat;
+    background-image: url(../images/project_background.jpg);
+    height: 600px;
+    background-position: 0% 0%;
+    overflow:hidden;
+    justify-content: center;
+}
+
+.project .project-heading{
+    margin-top: 1rem;
+    text-align: center;
+    align-items: center;
+    color: blueviolet;
+    font-family: "raleway-bold";
+}
+
+.project hr{
+    margin: 2rem;
+    border-top: 3px solid yellow;
+}
+
+
+.project .project-data{
+    width: 350px;
+    height: 400px;
+    background-color: wheat;
+    border: 3px solid black;
+}
+
+.project .project-data .pro-img{
+    margin-left: 5rem;
+    padding: 2rem;
+    height: 2rem;
+    width: 2rem;
+}
+
+.project .container .project-data .pro-data{
+    padding: 7rem;
 }
